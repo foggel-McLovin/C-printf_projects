@@ -1,8 +1,28 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-int handle_string(char *str);
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <limits.h>
+#include <unistd.h>
+
+
+
+/**
+ * struct op - match the conversion specifiers for printf
+ * @form: type char pointer of the specifier
+ * @m: type pointer to function for the conversion specifier
+ *
+ */
+
+typedef struct op
+{
+	char *form;
+	int (*m)();
+} op_t;
+int printf_char(va_list val);
+int printf_string(va_list val);
+int _putchar(char c);
 int _printf(const char *format, ...);
-
-#endif /* MAIN_H */
-
+#endif
