@@ -26,4 +26,6 @@ int printf_string(va_list argument);
 int _putchar(char c);
 int _printf(const char *format, ...);
 int printf_percent(void);
+int _strlen(char *s);
+int _strlenc(const char *s);
 #endif
