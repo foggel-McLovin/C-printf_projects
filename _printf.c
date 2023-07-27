@@ -6,7 +6,7 @@
  */
 int _printf(const char * const format, ...)
 {
-	ops_t m[] = {
+	op_t m[] = {
 		{"%s", printf_string}, {"%c", printf_char},
 		{"%%", printf_37}
 	};
@@ -24,7 +24,7 @@ Here:
 		j = 2;
 		while (j >= 0)
 		{
-			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+			if (m[j].form[0] == format[i] && m[j].form[1] == format[i + 1])
 			{
 				len += m[j].f(args);
 				i = i + 2;

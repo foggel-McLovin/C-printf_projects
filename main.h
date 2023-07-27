@@ -19,7 +19,7 @@
 typedef struct format
 {
 	char *form;
-	int (*m)();
+	int (*f)();
 } op_t;
 int printf_char(va_list argument);
 int printf_string(va_list argument);
