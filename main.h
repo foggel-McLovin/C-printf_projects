@@ -16,7 +16,7 @@
  *
  */
 
-typedef struct op
+typedef struct format
 {
 	char *form;
 	int (*m)();

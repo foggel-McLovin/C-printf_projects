@@ -1,51 +1,41 @@
 #include "main.h"
-
 /**
- * _printf - Prints formatted output to stdout.
- * @format: The format string containing the text and format specifiers.
- * Return: The number of characters printed, or -1 on failure.
+ * _printf - is a function that selects the correct function to print.
+ * @format: identifier to look for.
+ * Return: the length of the string.
  */
-int _printf(const char *format, ...)
+int _printf(const char * const format, ...)
 {
+	ops_t m[] = {
+		{"%s", printf_string}, {"%c", printf_char},
+		{"%%", printf_37}
+	};
+
 	va_list args;
-	int i = 0, len = 0;
+	int i = 0, j, len = 0;
 
 	va_start(args, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
 
-	if (format == NULL)
-		return -1;
-
+Here:
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%')
+		j = 2;
+		while (j >= 0)
 		{
-			i++; // Move past the '%'
-
-			if (format[i] == 's')
-				len += printf_string(va_arg(args, char *));
-			else if (format[i] == 'c')
-				len += printf_char(va_arg(args, int));
-			else if (format[i] == '%')
+			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
-				_putchar('%');
-				len++;
+				len += m[j].f(args);
+				i = i + 2;
+				goto Here;
 			}
-			else
-			{
-				_putchar('%'); // Print the original '%'
-				_putchar(format[i]);
-				len += 2; // Account for both characters printed
-			}
+			j--;
 		}
-		else
-		{
-			_putchar(format[i]);
-			len++;
-		}
-
+		_putchar(format[i]);
+		len++;
 		i++;
 	}
-
 	va_end(args);
-	return len;
+	return (len);
 }
