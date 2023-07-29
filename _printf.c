@@ -8,7 +8,8 @@ int _printf(const char * const format, ...)
 {
 	op_t m[] = {
 		{"%s", printf_string}, {"%c", printf_char},
-		{"%%", printf_percent}
+		{"%%", printf_percent}, {"%i", printf_int},
+		{"%d", printf_dec}
 	};
 
 	va_list args;

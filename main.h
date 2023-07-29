@@ -12,7 +12,7 @@
 /**
  * struct op - match the conversion specifiers for printf
  * @form: type char pointer of the specifier
- * @m: type pointer to function for the conversion specifier
+ * @f: type pointer to function for the conversion specifier
  *
  */
 
@@ -28,4 +28,5 @@ int _printf(const char *format, ...);
 int printf_percent(void);
 int _strlen(char *s);
 int _strlenc(const char *s);
+int printf_string(va_list argument);
 #endif
