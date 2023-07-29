@@ -30,4 +30,5 @@ int _strlen(char *s);
 int _strlenc(const char *s);
 int printf_int(va_list args);
 int printf_dec(va_list args);
+int printf_unsigned(va_list args);
 #endif
