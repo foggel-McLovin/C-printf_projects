@@ -10,7 +10,10 @@ int _printf(const char * const format, ...)
 		{"%s", printf_string}, {"%c", printf_char},
 		{"%%", printf_percent}, {"%i", printf_int},
 		{"%d", printf_dec}
-	};
+        };   
+	        
+
+	
 
 	va_list args;
 	int i = 0, j, len = 0;

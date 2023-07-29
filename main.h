@@ -10,7 +10,7 @@
 
 
 /**
- * struct op - match the conversion specifiers for printf
+ * struct format - match the conversion specifiers for printf
  * @form: type char pointer of the specifier
  * @f: type pointer to function for the conversion specifier
  *
@@ -30,5 +30,4 @@ int _strlen(char *s);
 int _strlenc(const char *s);
 int printf_int(va_list args);
 int printf_dec(va_list args);
-int printf_unsigned(va_list args);
 #endif
