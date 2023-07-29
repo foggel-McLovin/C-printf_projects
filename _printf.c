@@ -25,7 +25,7 @@ int _printf(const char * const format, ...)
 Here:
 	while (format[i] != '\0')
 	{
-		j = 2;
+		j = 4;
 		while (j >= 0)
 		{
 			if (m[j].form[0] == format[i] && m[j].form[1] == format[i + 1])
