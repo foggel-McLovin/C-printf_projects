@@ -1,0 +1,74 @@
+.TH CUSTOM_PRINTF_FUNCTIONS 3 "July 2023" "Version 1.0" "User Commands"
+
+.SH NAME
+custom_printf_functions - Custom printf functions
+
+.SH SYNOPSIS
+.B #include "main.h"
+.sp
+.I #include <stdarg.h>
+.I int printf_char(va_list argument);
+.I int printf_string(va_list argument);
+.I int _putchar(char c);
+.I int _printf(const char *format, ...);
+.I int printf_percent(void);
+.I int _strlen(char *s);
+.I int _strlenc(const char *s);
+.I int printf_int(va_list args);
+.I int printf_dec(va_list args);
+
+.SH DESCRIPTION
+The custom_printf_functions library provides a set of custom printf functions that offer similar functionality to the standard printf function. Each function serves a specific purpose for handling character printing, strings, and integer formatting.
+
+.SH FUNCTIONS
+.TP
+.B printf_char(va_list argument)
+Prints a single character to the standard output.
+
+.TP
+.B printf_string(va_list argument)
+Prints a string to the standard output.
+
+.TP
+.B _putchar(char c)
+Prints a single character to the standard output.
+
+.TP
+.B _printf(const char *format, ...)
+Custom printf function that supports a limited set of format specifiers. (Include a brief description of the supported format specifiers)
+
+.TP
+.B printf_percent(void)
+Prints the percent sign ('%') to the standard output.
+
+.TP
+.B _strlen(char *s)
+Calculates the length of a string.
+
+.TP
+.B _strlenc(const char *s)
+Calculates the length of a string, excluding the null terminator.
+
+.TP
+.B printf_int(va_list args)
+Prints an integer to the standard output.
+
+.TP
+.B printf_dec(va_list args)
+Prints a decimal integer to the standard output.
+
+.SH RETURN VALUE
+Each function returns the number of characters printed on success and -1 on failure.
+
+.SH EXAMPLES
+Provide some usage examples of the custom printf functions.
+
+.SH SEE ALSO
+.B printf(3)
+
+.SH BUGS
+There are no known bugs in this library.
+
+.SH AUTHOR
+Written by yassine guellouz  as a part of the custom printf project.
+
