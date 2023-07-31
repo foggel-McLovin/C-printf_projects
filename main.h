@@ -12,7 +12,7 @@
 /**
  * struct format - match the conversion specifiers for printf
  * @form: type char pointer of the specifier
- * @f: type pointer to function for the conversion specifier
+ * @f: type pointer to function for the conversion specifiers
  *
  */
 
