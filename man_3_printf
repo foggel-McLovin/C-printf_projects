@@ -67,7 +67,7 @@ Provide some usage examples of the custom printf functions.
 .B printf(3)
 
 .SH BUGS
-There are no known bugs in this library.
+There are no known bugs in this library..
 
 .SH AUTHOR
 Written by yassine guellouz  as a part of the custom printf project.
