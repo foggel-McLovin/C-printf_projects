@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strlen - Returns the lenght of a string ( modifiable ).
+ * _strlen - Returns lenght of a string ( modifiable ).
  * @s: Type char pointer
  * Return: c.
  */
